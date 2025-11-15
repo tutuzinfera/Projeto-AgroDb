@@ -1,9 +1,9 @@
-# 📌 AgroDB – API de Gestão Agrícola  
+#  AgroDB – API de Gestão Agrícola  
 **Servidor para gerenciamento de clientes, produtores, produtos, pedidos e pagamentos em um ecossistema agrícola.**
 
 ---
 
-## 📘 **Sumário**
+##  **Sumário**
 1. [Visão Geral](#visão-geral)  
 2. [Tecnologias Utilizadas](#tecnologias-utilizadas)  
 3. [Arquitetura Geral](#arquitetura-geral)  
@@ -17,7 +17,7 @@
 
 ---
 
-# 📖 Visão Geral
+#  Visão Geral
 
 **AgroDB** é uma API criada para facilitar operações entre **clientes** e **produtores rurais**, permitindo:
 
@@ -33,7 +33,7 @@ A API segue princípios modernos de arquitetura REST, boas práticas de separaç
 
 ---
 
-# 🛠️ Tecnologias Utilizadas
+#  Tecnologias Utilizadas
 
 ### **Backend**
 - **Java 21**
@@ -51,7 +51,7 @@ A API segue princípios modernos de arquitetura REST, boas práticas de separaç
 
 ---
 
-# 🏗️ Arquitetura Geral
+#  Arquitetura Geral
 
 A aplicação segue uma arquitetura em camadas:
 
@@ -81,9 +81,9 @@ Cada módulo possui isolamento próprio (Cliente, Produto, Produtor, Pedido, Pag
 
 ---
 
-# ⚙️ Configuração do Ambiente
+#  Configuração do Ambiente
 
-### 🔧 `application.properties`
+###  `application.properties`
 
 ```properties
 spring.application.name=back
@@ -115,7 +115,7 @@ app.datasource.admin.driver-class-name=com.mysql.cj.jdbc.Driver
 
 ---
 
-# 🔐 Segurança e Controle de Acesso
+#  Segurança e Controle de Acesso
 
 A API utiliza **Basic Auth** com controle de permissões via `@PreAuthorize`.
 
@@ -137,46 +137,46 @@ public ResponseEntity<Cliente> createCliente(@RequestBody CreateClienteDto dto) 
 
 ---
 
-# 📡 Endpoints Principais
+#  Endpoints Principais
 
 Abaixo os módulos e respectivas rotas resumidas.
 
-## 👤 Cliente (`/cliente`)
+##  Cliente (`/cliente`)
 - POST `/cliente`
 - GET `/cliente/{id}`
 - POST `/cliente/{id}`
 - GET `/cliente`
 - DELETE `/cliente/{id}`
 
-## 📦 Produto (`/produto`)
+##  Produto (`/produto`)
 - POST `/produto`
 - GET `/produto/{id}`
 - POST `/produto/{id}`
 - GET `/produto`
 - DELETE `/produto/{id}`
 
-## 👨‍🌾 Produtor (`/produtor`)
+##  Produtor (`/produtor`)
 - POST `/produtor`
 - GET `/produtor/{id}`
 - POST `/produtor/{id}`
 - GET `/produtor`
 - DELETE `/produtor/{id}`
 
-## 🔗 Produtor–Produto (`/produtor-produto`)
+##  Produtor–Produto (`/produtor-produto`)
 - POST `/produtor-produto/{idProdutor}`
 
-## 🧾 Pedido (`/pedido`)
+##  Pedido (`/pedido`)
 - POST `/pedido`
 - GET `/pedido/{id}`
 - POST `/pedido/{id}`
 - GET `/pedido`
 - DELETE `/pedido/{id}`
 
-## 📋 Item do Pedido (`/pedido`)
+##  Item do Pedido (`/pedido`)
 - POST `/pedido/{id}/item`
 - GET `/pedido/item/{idPedido}`
 
-## 💰 Pagamentos (`/pagamento`)
+##  Pagamentos (`/pagamento`)
 ### Pix
 - POST `/pagamento/pix`
 - GET `/pagamento/pix/{id}`
@@ -191,7 +191,7 @@ Abaixo os módulos e respectivas rotas resumidas.
 
 ---
 
-# 🔄 Fluxos do Sistema
+#  Fluxos do Sistema
 
 ## **Fluxo 1 – Cliente fazendo pedido**
 
@@ -321,7 +321,7 @@ Endpoints envolvidos:
 
 ---
 
-# 🗃️ Persistência NoSQL – Logs
+#  Persistência NoSQL – Logs
 
 Toda operação sensível gera um documento MongoDB:
 
@@ -340,7 +340,7 @@ Toda operação sensível gera um documento MongoDB:
 
 ---
 
-# ❗ Erros e Respostas
+#  Erros e Respostas
 
 ### **404 – Não encontrado**
 ```json
@@ -354,7 +354,7 @@ Retorna o padrão Spring Boot com stacktrace desabilitado em produção.
 
 ---
 
-# ▶️ Como Rodar o Projeto
+#  Como Rodar o Projeto
 
 ### 1. Clonar o repositório
 ```bash
