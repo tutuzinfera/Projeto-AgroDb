@@ -1,9 +1,6 @@
 # 📌 AgroDB – API de Gestão Agrícola  
 **Servidor para gerenciamento de clientes, produtores, produtos, pedidos e pagamentos em um ecossistema agrícola.**
 
-Este projeto implementa uma API REST robusta, modular e segura, permitindo que produtores rurais cadastrem produtos com facilidade enquanto clientes encontram, solicitam pedidos e realizam pagamentos com diferentes métodos.  
-Conta com persistência híbrida (MySQL + MongoDB), controle de acesso baseado em papéis e registro de logs de operações críticas.
-
 ---
 
 ## 📘 **Sumário**
@@ -203,7 +200,7 @@ Abaixo os módulos e respectivas rotas resumidas.
 3. Adicionar itens ao pedido  
 4. Registrar pagamento (Pix, Cartão ou Boleto)
 
-Métodos envolvidos:
+Endpoints envolvidos:
 - `createCliente`
 - `createPedido`
 - `addItens`
@@ -218,12 +215,13 @@ Métodos envolvidos:
 3. Associar produto ao produtor  
 4. Produto pode ser utilizado nos pedidos
 
-Métodos envolvidos:
+Endpoints envolvidos:
 - `createProdutor`
 - `createProduto`
 - `vincularProdutorProduto`
 
 ---
+
 ## **Fluxo 3 – Manutenção de cadastros**
 
 Atualizar dados do cliente
@@ -234,7 +232,13 @@ Atualizar dados do produto
 
 Desativar/reativar cliente, produtor ou produto
 
-Endpoints típicos: updateCliente, updateProdutor, updateProduto, toggleAtivo*
+Endpoints envolvidos: 
+-`updateCliente`
+-`updateProdutor`
+-`updateProduto`
+-`toggleAtivo`
+
+---
 
 ## **Fluxo 4 – Gestão de pedidos**
 
@@ -246,7 +250,13 @@ Atualizar status do pedido (criado → pago → em preparação → concluído/c
 
 Cancelar pedido e, se for o caso, disparar estorno
 
-Endpoints: listPedidosCliente, getPedidoById, updateStatusPedido, cancelarPedido
+Endpoints envolvidos: 
+-`listPedidosCliente`
+-`getPedidoById`
+-`updateStatusPedido`
+-`cancelarPedido`
+
+---
 
 ## **Fluxo 5 – Pagamentos e estornos**
 
@@ -258,7 +268,13 @@ Gerar estorno total/parcial
 
 Conciliar pagamento com pedido
 
-Endpoints: consultarPagamento, reprocessarPagamento, estornarPagamento, conciliarPagamento
+Endpoints envolvidos: 
+-`consultarPagamento`
+-`reprocessarPagamento`
+-`estornarPagamento`
+-`conciliarPagamento`
+
+---
 
 ## **Fluxo 6 – Relatórios e conciliação financeira**
 
@@ -268,7 +284,12 @@ Relatório de comissões/taxas
 
 Exportação (CSV/Excel)
 
-Endpoints: relatorioVendas, relatorioProdutor, relatorioFinanceiro
+Endpoints envolvidos: 
+-`relatorioVendas `
+-`relatorioProdutor`
+-`relatorioFinanceiro`
+
+---
 
 ## **Fluxo 7 – Administração e segurança**
 
@@ -278,7 +299,13 @@ Perfis e permissões (quem pode criar produtor, aprovar cadastro, estornar, etc.
 
 Auditoria de operações críticas (log de quem fez o quê)
 
-Endpoints: createUser, listUsers, atribuirPerfil, listLogsAuditoria
+Endpoints: 
+-`createUser`
+-`listUsers`
+-`atribuirPerfil`
+-`listLogsAuditoria`
+
+---
 
 ## **Fluxo 8 – Operações críticas de serviço (suporte)**
 
@@ -290,7 +317,14 @@ Corrigir vínculo de item/pedido manualmente em casos excepcionais
 
 Ferramentas de busca rápida: por CPF, por ID do pedido, por transação de pagamento
 
-Endpoints: diagnosticarPedido, reprocessarWebhook, fixVinculoItem, searchByCPF, searchByTransacao
+Endpoints: 
+-`diagnosticarPedido`
+-`reprocessarWebhook`
+-`fixVinculoItem`
+-`searchByCPF`
+-`searchByTransacao`
+
+---
 
 # 🗃️ Persistência NoSQL – Logs
 
