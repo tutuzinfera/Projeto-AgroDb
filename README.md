@@ -294,7 +294,7 @@ Perfis e permissões (quem pode criar produtor, aprovar cadastro, estornar, etc.
 
 Auditoria de operações críticas (log de quem fez o quê)
 
-Endpoints: 
+Endpoints envolvidos: 
 -`createUser`
 -`listUsers`
 -`atribuirPerfil`
@@ -312,7 +312,7 @@ Corrigir vínculo de item/pedido manualmente em casos excepcionais
 
 Ferramentas de busca rápida: por CPF, por ID do pedido, por transação de pagamento
 
-Endpoints: 
+Endpoints envolvidos: 
 -`diagnosticarPedido`
 -`reprocessarWebhook`
 -`fixVinculoItem`
