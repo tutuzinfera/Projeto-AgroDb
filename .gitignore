@@ -1,0 +1,75 @@
+############################
+# Build / Dependências
+############################
+
+# Maven
+/target/
+/out/
+
+# Arquivos temporários de compilação
+*.class
+*.jar
+*.war
+*.ear
+
+############################
+# Logs
+############################
+
+*.log
+logs/
+spring.log
+
+############################
+# Configuração / Segredos
+############################
+
+# Arquivo de configuração real (com senhas)
+application.properties
+application.yml
+application-local.properties
+application-*.yml
+application-*.properties
+
+# Permitir apenas arquivos de exemplo (sem senhas reais)
+!application-example.properties
+!application-example.yml
+
+# Variáveis de ambiente
+.env
+.env.*
+*.env
+
+############################
+# IDEs
+############################
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code (se usar)
+.vscode/
+
+############################
+# SO / Lixo de sistema
+############################
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+############################
+# Outros
+############################
+
+# Dumps de banco / backups
+*.sql
+*.dump
+*.bak
+*.tmp
