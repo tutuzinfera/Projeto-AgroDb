@@ -224,6 +224,73 @@ Métodos envolvidos:
 - `vincularProdutorProduto`
 
 ---
+## **Fluxo 3 – Manutenção de cadastros**
+
+Atualizar dados do cliente
+
+Atualizar dados do produtor (incluindo certificações)
+
+Atualizar dados do produto
+
+Desativar/reativar cliente, produtor ou produto
+
+Endpoints típicos: updateCliente, updateProdutor, updateProduto, toggleAtivo*
+
+## **Fluxo 4 – Gestão de pedidos**
+
+Listar pedidos de um cliente
+
+Detalhar pedido
+
+Atualizar status do pedido (criado → pago → em preparação → concluído/cancelado)
+
+Cancelar pedido e, se for o caso, disparar estorno
+
+Endpoints: listPedidosCliente, getPedidoById, updateStatusPedido, cancelarPedido
+
+## **Fluxo 5 – Pagamentos e estornos**
+
+Consultar status do pagamento (integração com gateway/PSP)
+
+Reprocessar pagamento pendente
+
+Gerar estorno total/parcial
+
+Conciliar pagamento com pedido
+
+Endpoints: consultarPagamento, reprocessarPagamento, estornarPagamento, conciliarPagamento
+
+## **Fluxo 6 – Relatórios e conciliação financeira**
+
+Relatório de vendas por período, por produtor, por produto
+
+Relatório de comissões/taxas
+
+Exportação (CSV/Excel)
+
+Endpoints: relatorioVendas, relatorioProdutor, relatorioFinanceiro
+
+## **Fluxo 7 – Administração e segurança**
+
+Cadastro de usuários internos (operadores, admin)
+
+Perfis e permissões (quem pode criar produtor, aprovar cadastro, estornar, etc.)
+
+Auditoria de operações críticas (log de quem fez o quê)
+
+Endpoints: createUser, listUsers, atribuirPerfil, listLogsAuditoria
+
+## **Fluxo 8 – Operações críticas de serviço (suporte)**
+
+Tratar pedidos travados (ex.: pagamento aprovado mas pedido não atualizado)
+
+Reprocessar webhook de pagamento
+
+Corrigir vínculo de item/pedido manualmente em casos excepcionais
+
+Ferramentas de busca rápida: por CPF, por ID do pedido, por transação de pagamento
+
+Endpoints: diagnosticarPedido, reprocessarWebhook, fixVinculoItem, searchByCPF, searchByTransacao
 
 # 🗃️ Persistência NoSQL – Logs
 
