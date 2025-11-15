@@ -201,10 +201,7 @@ Abaixo os módulos e respectivas rotas resumidas.
 4. Registrar pagamento (Pix, Cartão ou Boleto)
 
 Endpoints envolvidos:
-- `createCliente`
-- `createPedido`
-- `addItens`
-- `criarPagamento*`
+- `createCliente`- `createPedido`- `addItens`- `criarPagamento*`
 
 ---
 
@@ -216,9 +213,7 @@ Endpoints envolvidos:
 4. Produto pode ser utilizado nos pedidos
 
 Endpoints envolvidos:
-- `createProdutor`
-- `createProduto`
-- `vincularProdutorProduto`
+- `createProdutor`- `createProduto`- `vincularProdutorProduto`
 
 ---
 
