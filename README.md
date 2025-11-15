@@ -374,10 +374,3 @@ BackApplication
 ```
 
 ### 5. Testar via Postman / Insomnia
-
----
-
-# 🚀 Pronto para publicação
-
-Este README foi estruturado para uso direto em portfólio (GitHub/GitLab/Bitbucket).  
-Sinta-se à vontade para complementar com prints de requisições, diagramas UML ou coleções do Postman.
